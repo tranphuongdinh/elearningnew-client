@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import React, { useRef } from "react";
 import TextareaAutosize from "react-textarea-autosize";
+import { toast } from "react-toastify";
 import Input from "../../components/Input/Input";
 import { Button } from "../Header/Header.style";
 import {
@@ -25,6 +26,11 @@ const Contact: React.FC = () => {
             phone,
             message,
         };
+
+				//handle send data...
+				toast.success("Đăng kí liên hệ tư vấn thành công!");
+
+				//reset form
         setName("");
         setEmail("");
         setPhone("");

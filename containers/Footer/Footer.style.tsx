@@ -32,9 +32,11 @@ export const EventWrapper = styled.div`
     color: #fff;
     h3 {
         text-transform: uppercase;
+				color: ${PRIMARY_COLOR};
     }
     p {
         text-align: justify;
+				font-size: .9rem;
     }
     @media (max-width: 992px) {
         width: 100%;

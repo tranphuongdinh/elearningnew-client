@@ -9,7 +9,8 @@ import MobileHeader from "./Header/MobileHeader";
 import "react-toastify/dist/ReactToastify.css";
 import "react-dropdown/style.css";
 import NextNProgress from "nextjs-progressbar";
-import { PRIMARY_COLOR } from "../constants/style";
+import { PRIMARY_BACKGROUND_COLOR, PRIMARY_COLOR } from "../constants/style";
+import ScrollToTop from "react-scroll-to-top";
 
 const AppLayout: React.FC<any> = ({ children }) => {
     const {
@@ -41,6 +42,7 @@ const AppLayout: React.FC<any> = ({ children }) => {
             {router.pathname !== DANG_NHAP && router.pathname != DANG_KI && (
                 <Footer></Footer>
             )}
+            <ScrollToTop smooth width="18" height="18" color={PRIMARY_BACKGROUND_COLOR} style={{border: "1px solid #ccc"}}/>
         </div>
     );
 };

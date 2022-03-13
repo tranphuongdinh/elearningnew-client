@@ -14,6 +14,7 @@ import {
 } from "./Footer.style";
 import Input from "../../components/Input/Input";
 import { Button } from "../Header/Header.style";
+import { toast } from "react-toastify";
 
 const Footer: React.FC = () => {
     const [name, setName] = React.useState("");
@@ -142,6 +143,11 @@ const Footer: React.FC = () => {
             email,
             phone,
         };
+
+        //handle send data...
+        toast.success("Đăng kí tư vấn thành công!");
+
+        //reset form
         setName("");
         setEmail("");
         setPhone("");
@@ -158,7 +164,12 @@ const Footer: React.FC = () => {
                         KHUYẾN MÃI hấp dẫn đến các bạn.
                     </p>
                     <div>
-                        <form>
+                        <form
+                            onSubmit={(e) => {
+                                e.preventDefault();
+                                toast.success("Đăng kí nhận tin thành công!");
+                            }}
+                        >
                             <EventInput>
                                 <input
                                     type="email"
