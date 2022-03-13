@@ -1,38 +1,80 @@
-import React from 'react'
-import { useRouter } from 'next/router'
+import React, { useContext, useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import { getCoursesClient } from "../apis/getCoursesClient";
-import { NextPage } from 'next';
+import { NextPage } from "next";
+import { CoursesProps } from "../models/models";
+import Head from "next/head";
+import { MainSection } from "../components/Commons/Commons.style";
+import CoursesList from "../containers/CoursesList/CoursesList";
 
-type TimKiemKhoaHocProps = {
-    courses: any;
-};
-
-const TimKiemKhoaHoc: NextPage<TimKiemKhoaHocProps> = ({ courses }) => {
+const TimKiemKhoaHoc: NextPage<CoursesProps> = ({
+    currentPage,
+    count,
+    totalPages = 0,
+    totalCount = 0,
+    courses,
+}) => {
     const router = useRouter();
-    const { tenKhoaHoc, maNhom } = router.query;
+
+    const {
+        page = 1,
+        pageSize = 10,
+        tenKhoaHoc = "",
+        maNhom = "",
+    } = router.query;
 
     return (
         <div>
-            <div>
-                TimKiemKhoaHoc {tenKhoaHoc} {maNhom}
-            </div>
-            <div>
-                {courses.map((course:any) => {
-                    return <h1 key={course.maKhoaHoc}>{course.tenKhoaHoc}</h1>;
-                })}
-            </div>
+            <Head>
+                <title>Tìm kiếm khóa học | Elearning</title>
+            </Head>
+            <MainSection>
+                <CoursesList
+                    courses={courses}
+                    title={totalCount > 0 ? `Tìm thấy ${totalCount} khóa học ${tenKhoaHoc ? tenKhoaHoc : ""}` : "Không tìm thấy khóa học"}
+                    currentPage={currentPage}
+                    count={count}
+                    totalPages={totalPages}
+                    totalCount={totalCount}
+                    expand={true}
+                ></CoursesList>
+            </MainSection>
         </div>
     );
 };
 
 export default TimKiemKhoaHoc;
 
-export async function getServerSideProps(ctx:any) {
-		const { tenKhoaHoc, maNhom } = ctx.query;
-		const data = await getCoursesClient().getCourses({tenKhoaHoc, maNhom});
+export async function getServerSideProps(ctx: any) {
+    const { page = 1, pageSize = 5, tenKhoaHoc = "", maNhom = "" } = ctx.query;
+    const data = await getCoursesClient().getCoursesByPage(
+        parseInt(page),
+        parseInt(pageSize),
+        tenKhoaHoc,
+        maNhom
+    );
+
+		console.log(data);
+
+    if (!data?.totalCount) {
+        return {
+            props: {
+                currentPage: 0,
+                count: 0,
+                totalPages: 0,
+                totalCount: 0,
+                courses: data.items || [],
+            },
+        };
+    }
+
     return {
         props: {
-            courses: data,
+            currentPage: data.currentPage,
+            count: data.count,
+            totalPages: data.totalPages,
+            totalCount: data.totalCount,
+            courses: data.items || [],
         },
     };
 }

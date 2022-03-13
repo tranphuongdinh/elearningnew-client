@@ -1,8 +1,26 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import { AuthProvider } from "../context/auth/auth.provider";
+import AppLayout from "../containers/AppLayout";
+import { useEffect, useState } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+    const [loaded, setLoaded] = useState(false);
+    useEffect(() => {
+        setLoaded(true);
+    }, []);
+
+    return (
+        <>
+            {loaded && (
+                <AuthProvider>
+                    <AppLayout>
+                        <Component {...pageProps} />
+                    </AppLayout>
+                </AuthProvider>
+            )}
+        </>
+    );
 }
 
-export default MyApp
+export default MyApp;
