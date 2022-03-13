@@ -86,6 +86,7 @@ const ThongTinTaiKhoan: NextPage = () => {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const data = {
+						...userDetail,
             hoTen: name,
             email,
             soDT: phone,
