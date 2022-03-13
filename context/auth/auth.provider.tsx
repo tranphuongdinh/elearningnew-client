@@ -31,7 +31,6 @@ function reducer(state: any, action: any) {
         }
         case "UPDATE_USER": {
             localStorage.setItem("userInfo", JSON.stringify(action.payload));
-            console.log(action.payload);
             return {
                 ...state,
                 user: action.payload,

@@ -56,7 +56,6 @@ const ThongTinTaiKhoan: NextPage = () => {
     };
 
     const resetValue = () => {
-        console.log("resetValue", userDetail);
         setName(userDetail?.hoTen || "");
         setEmail(userDetail?.email);
         setPhone(userDetail?.soDT || "");

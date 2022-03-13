@@ -75,7 +75,6 @@ const MobileHeader: React.FC<HeaderProps> = ({ user }) => {
     const getCategories = async () => {
         const res = await getCoursesClient().getCategory();
         if (res?.length) {
-            console.log(res);
             const options = res.map((item: any) => {
                 return {
                     value: item.maDanhMuc,

@@ -60,8 +60,6 @@ export async function getServerSideProps(ctx: any) {
         maNhom
     );
 
-    console.log(data);
-
     if (!data?.totalCount) {
         return {
             props: {

@@ -45,7 +45,6 @@ const ExpandCourse: React.FC<CourseProps> = ({ course }) => {
 
     useEffect(() => {
         isAuthenticated && getRegisteredCourses();
-        console.log(course);
     }, []);
 
     const registerCourse = async (maKhoaHoc: string, taiKhoan: string) => {
