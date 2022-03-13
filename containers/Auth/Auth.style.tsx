@@ -36,7 +36,6 @@ export const LoginWrapper = styled.div`
 export const LoginContainer = styled(Container)`
     width: 100%;
     justify-content: space-between;
-    padding: 10px 50px 40px 50px;
     border-radius: 5px;
     box-shadow: 20px 20px 60px #d9d9d9;
     background: rgba(255, 255, 255, 0.9);
@@ -55,7 +54,7 @@ export const LoginContent = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 50px;
+    padding: 20px 40px;
 
     @media (max-width: 1200px) {
         &.auth {

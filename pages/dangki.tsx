@@ -282,6 +282,7 @@ const Register: NextPage = () => {
 
                             <InputLabel>
                                 <i className="fa-solid fa-user"></i>Họ tên
+                                (không bắt buộc)
                             </InputLabel>
                             <InputGroup>
                                 <input
@@ -306,7 +307,7 @@ const Register: NextPage = () => {
 
                             <InputLabel>
                                 <i className="fa-solid fa-phone"></i>Số điện
-                                thoại
+                                thoại (không bắt buộc)
                             </InputLabel>
                             <InputGroup>
                                 <input
