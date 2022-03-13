@@ -11,4 +11,4 @@
 
 * Các công nghệ sử dụng: NextJS, ReactJS, Styled Component, Axios
 * Link production: [Cybersoft Elearning](http://https://vi.wikipedia.org/wiki/Markdown)
-* Link video demo: {@youtube: https://www.youtube.com/watch?v=AOW4VlqYUb0}
+* Link video demo: [Cybersoft Elearning Client - Video demo](https://www.youtube.com/watch?v=AOW4VlqYUb0)
