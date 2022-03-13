@@ -22,7 +22,7 @@ export const HeaderBrand = styled.a`
             width: 60px;
             height: 60px;
             transform: scale(0.75);
-            content: url("/images/icon.png");
+            content: url("./images/icon.png");
         }
     }
 `;
@@ -126,9 +126,9 @@ export const PageInfo = styled.div`
         }
     }
 
-		.Dropdown-root {
-			width: 220px;
-		}
+    .Dropdown-root {
+        width: 220px;
+    }
 
     .Dropdown-control {
         background: ${PRIMARY_COLOR};
@@ -137,7 +137,7 @@ export const PageInfo = styled.div`
         align-items: center;
         justify-content: space-between;
         width: 100%;
-				padding: 10px 10px;
+        padding: 10px 10px;
     }
 
     .Dropdown-option {
@@ -153,7 +153,7 @@ export const Button = styled.button`
     border: 2px solid transparent;
     padding: 10px 20px;
     color: #fff;
-		transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
     &:hover {
         background: ${PRIMARY_COLOR_HOVER};
@@ -166,14 +166,14 @@ export const Button = styled.button`
 
         &:hover {
             background: ${PRIMARY_COLOR};
-						color:#fff !important;
+            color: #fff !important;
         }
     }
 
-		&.disabled {
-			opacity: .5;
-			pointer-events: none;
-		}
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
 `;
 
 export const NavLink = styled.nav`
@@ -202,7 +202,8 @@ export const NavLink = styled.nav`
                 transition: all 0.2s ease-in-out;
             }
 
-            &:hover, &.active {
+            &:hover,
+            &.active {
                 color: ${PRIMARY_COLOR};
 
                 &:after {
@@ -245,16 +246,16 @@ export const UserInfo = styled.div`
         }
     }
 
-		${Button} {
-			margin-left: 5px;
-		}
+    ${Button} {
+        margin-left: 5px;
+    }
 
-		p {
-			text-overflow: ellipsis;
-			white-space: nowrap;
-			overflow: hidden;
-			max-width: 200px;
-		}
+    p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 200px;
+    }
 `;
 export const UserMenu = styled.ul`
     position: absolute;

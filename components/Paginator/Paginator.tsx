@@ -72,19 +72,21 @@ const Paginator: React.FC<PaginatorProps> = ({
 
     const handleChangePage = (page: number) => {
         router.push({
-					pathname: router.pathname,
-					query: {
-						...router.query,
-						page: page
-					}
-				});
+            pathname: router.pathname,
+            query: {
+                ...router.query,
+                page: page,
+            },
+        });
     };
 
     return (
         <PaginatorWrapper>
             <button
                 className={`left ${currentPage <= 1 && "disabled"}`}
-                onClick={() => currentPage > 1 && handleChangePage(currentPage - 1)}
+                onClick={() =>
+                    currentPage > 1 && handleChangePage(currentPage - 1)
+                }
             >
                 <i className="fa-solid fa-angle-left"></i>
             </button>
@@ -135,10 +137,11 @@ const Paginator: React.FC<PaginatorProps> = ({
                 </ul>
             )}
             <button
-                className={`${
-                    currentPage >= totalPages && "disabled"
-                } right`}
-                onClick={() => currentPage <= totalPages - 1 && handleChangePage(currentPage + 1)}
+                className={`${currentPage >= totalPages && "disabled"} right`}
+                onClick={() =>
+                    currentPage <= totalPages - 1 &&
+                    handleChangePage(currentPage + 1)
+                }
             >
                 <i className="fa-solid fa-angle-right"></i>
             </button>

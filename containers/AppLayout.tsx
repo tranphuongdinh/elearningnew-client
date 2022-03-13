@@ -18,7 +18,7 @@ const AppLayout: React.FC<any> = ({ children }) => {
     const router = useRouter();
     return (
         <div>
-            <NextNProgress color={PRIMARY_COLOR} height={5}/>
+            <NextNProgress color={PRIMARY_COLOR} height={5} />
             <ToastContainer
                 position="top-right"
                 autoClose={2000}

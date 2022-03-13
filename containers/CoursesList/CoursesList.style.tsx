@@ -27,6 +27,7 @@ export const CoursesListContainer = styled(Container)`
     h1 {
         color: ${PRIMARY_COLOR};
         text-transform: uppercase;
+        text-align: center;
     }
     z-index: 3;
     position: relative;
@@ -40,8 +41,8 @@ export const CoursesGrid = styled.div`
     grid-column-gap: 40px;
     grid-row-gap: 40px;
 
-    @media (max-width: 576px) {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    @media (max-width: 476px) {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
 
     &.expand {

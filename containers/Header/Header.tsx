@@ -20,7 +20,7 @@ import {
     DANH_MUC_KHOA_HOC,
     KHOA_HOC,
     THONG_TIN_TAI_KHOAN,
-		TIM_KIEM_KHOA_HOC,
+    TIM_KIEM_KHOA_HOC,
 } from "../../constants/navigation";
 import { AuthContext } from "../../context/auth/auth.context";
 import Dropdown from "react-dropdown";
@@ -35,7 +35,9 @@ const Header: React.FC<HeaderProps> = ({ user }) => {
     const [toggleUserMenu, setToggleUserMenu] = useState(false);
     const router = useRouter();
 
-    const [searchValue, setSearchValue] = useState(router?.query?.tenKhoaHoc || "");
+    const [searchValue, setSearchValue] = useState(
+        router?.query?.tenKhoaHoc || ""
+    );
 
     const [categoryOptions, setCategoryOptions] = useState([]);
 

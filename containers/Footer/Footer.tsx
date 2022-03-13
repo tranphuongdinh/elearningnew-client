@@ -1,6 +1,7 @@
 import React from "react";
-import { useRouter } from "next/router";
 import {
+    AddressDetail,
+    AddressWrapper,
     ButtonSocial,
     EventInput,
     EventWrapper,
@@ -8,15 +9,98 @@ import {
     FooterContainer,
     FooterEnd,
     FooterWrapper,
+    AddressContainer,
+    AddressDetailWrapper,
 } from "./Footer.style";
 import Input from "../../components/Input/Input";
 import { Button } from "../Header/Header.style";
 
 const Footer: React.FC = () => {
-    const router = useRouter();
     const [name, setName] = React.useState("");
     const [email, setEmail] = React.useState("");
     const [phone, setPhone] = React.useState("");
+
+    const addresses = [
+        {
+            city: "TP. Hồ Chí Minh",
+            address: [
+                {
+                    title: "Trụ sở: 112 Cao Thắng, Quận 3",
+                    detail: (
+                        <p>
+                            Hotline: 096.105.1014 – 077.886.1911
+                            <br />
+                            Địa chỉ: Tầng 5, toà nhà Suri, 112 Cao Thắng, Quận
+                            3, TPHCM
+                        </p>
+                    ),
+                },
+                {
+                    title: "459 Sư Vạn Hạnh, Quận 10",
+                    detail: (
+                        <p>
+                            Hotline: 096.105.1014 – 077.886.1911
+                            <br /> Địa chỉ: Tầng 2, toà nhà WinHome, 459 Sư Vạn
+                            hạnh, Quận 10, TPHCM
+                        </p>
+                    ),
+                },
+                {
+                    title: "82 Ung Văn Khiêm, Bình Thạnh",
+                    detail: (
+                        <p>
+                            Hotline: 096.105.1014 – 077.886.1911 <br />
+                            Địa chỉ: 82 Ung Văn Khiêm, Bình Thạnh, TPHCM
+                        </p>
+                    ),
+                },
+                {
+                    title: "110 Đường số 10, Park Hill City Land, Phan Văn Trị, Gò Vấp",
+                    detail: (
+                        <p>
+                            Hotline: 096.105.1014 – 077.886.1911
+                            <br /> Địa chỉ: 110 Đường số 10, Park Hill City
+                            Land, Phan Văn Trị, Gò Vấp, TPHCM
+                        </p>
+                    ),
+                },
+                {
+                    title: "56 Lê Cảnh Tuân, Tân Phú",
+                    detail: (
+                        <p>
+                            Hotline: 096.105.1014 – 077.886.1911 <br />
+                            Địa chỉ: 56 Lê Cảnh Tuân, Tân Phú, TPHCM
+                        </p>
+                    ),
+                },
+                {
+                    title: "6C Đường số 8, Linh Tây, Thủ Đức (gần ĐH Cảnh Sát)",
+                    detail: (
+                        <p>
+                            Hotline: 096.105.1014 – 077.886.1911
+                            <br /> Địa chỉ: 6C Đường số 8, Linh Tây, Thủ Đức,
+                            TPHCM
+                        </p>
+                    ),
+                },
+            ],
+        },
+        {
+            city: "Đà Nẵng",
+            address: [
+                {
+                    title: "103 Nguyễn Hữu Dật, Hải Châu",
+                    detail: (
+                        <p>
+                            Hotline: 096.105.1014 – 077.886.1911 <br /> Địa chỉ:
+                            103 Nguyễn Hữu Dật, Hải Châu, ĐN
+                        </p>
+                    ),
+                },
+            ],
+        },
+    ];
+
     const formInputs = [
         {
             type: "text",
@@ -118,8 +202,27 @@ const Footer: React.FC = () => {
                     ></iframe>
                 </FacebookEmbed>
             </FooterContainer>
+            <AddressContainer>
+                {addresses.map((address, index) => {
+                    return (
+                        <AddressWrapper key={`address-${index}`}>
+                            <h3>{address.city}</h3>
+                            <AddressDetailWrapper>
+                                {address.address.map((addr, index) => {
+                                    return (
+                                        <AddressDetail key={`addr-${index}`}>
+                                            <h4>{addr.title}</h4>
+                                            {addr.detail}
+                                        </AddressDetail>
+                                    );
+                                })}
+                            </AddressDetailWrapper>
+                        </AddressWrapper>
+                    );
+                })}
+            </AddressContainer>
             <FooterEnd>
-                <h5>2021 | Designed by Elearning</h5>
+                <h5>2021 | Designed by Cybersoft Elearning</h5>
                 <div style={{ display: "flex" }}>
                     <a
                         href="https://www.facebook.com/lophocviet/"

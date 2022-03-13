@@ -31,7 +31,13 @@ const TimKiemKhoaHoc: NextPage<CoursesProps> = ({
             <MainSection>
                 <CoursesList
                     courses={courses}
-                    title={totalCount > 0 ? `Tìm thấy ${totalCount} khóa học ${tenKhoaHoc ? tenKhoaHoc : ""}` : "Không tìm thấy khóa học"}
+                    title={
+                        totalCount > 0
+                            ? `Tìm thấy ${totalCount} khóa học ${
+                                  tenKhoaHoc ? tenKhoaHoc : ""
+                              }`
+                            : "Không tìm thấy khóa học"
+                    }
                     currentPage={currentPage}
                     count={count}
                     totalPages={totalPages}
@@ -54,7 +60,7 @@ export async function getServerSideProps(ctx: any) {
         maNhom
     );
 
-		console.log(data);
+    console.log(data);
 
     if (!data?.totalCount) {
         return {

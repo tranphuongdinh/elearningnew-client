@@ -2,15 +2,22 @@ import React from "react";
 import { InputArea, InputWrapper } from "./Input.style";
 
 type InputProps = {
-  placeholder: string;
-	type: string;
-	name: string;
-	value: string;
-	icon: string;
-	onChange: any;
+    placeholder: string;
+    type: string;
+    name: string;
+    value: string;
+    icon: string;
+    onChange: any;
 };
 
-const Input: React.FC<InputProps> = ({type, placeholder, name, value, icon, onChange}) => {
+const Input: React.FC<InputProps> = ({
+    type,
+    placeholder,
+    name,
+    value,
+    icon,
+    onChange,
+}) => {
     return (
         <InputWrapper>
             <InputArea>
@@ -21,7 +28,7 @@ const Input: React.FC<InputProps> = ({type, placeholder, name, value, icon, onCh
                     name={name}
                     value={value}
                     onChange={onChange}
-										required
+                    required
                 />
             </InputArea>
         </InputWrapper>

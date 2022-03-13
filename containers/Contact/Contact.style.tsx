@@ -7,9 +7,9 @@ export const ContactWrapper = styled.div`
     background-size: cover;
     padding: 50px 0;
 
-		@media	(max-width: 576px) {
-			padding: 20px 0;
-		}	
+    @media (max-width: 576px) {
+        padding: 20px 0;
+    }
 `;
 
 export const ContactContainer = styled(Container)`
@@ -18,6 +18,10 @@ export const ContactContainer = styled(Container)`
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-column-gap: 50px;
     grid-row-gap: 50px;
+
+    @media (max-width: 476px) {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
 `;
 
 export const ContactImage = styled.div`
@@ -40,9 +44,9 @@ export const ContactForm = styled.form`
     box-shadow: 0px 0px 10px rgba(46, 46, 46, 0.5);
     width: 100%;
 
-		@media (max-width: 576px) {
-			padding: 15px;
-		}
+    @media (max-width: 576px) {
+        padding: 15px;
+    }
 
     h1 {
         color: ${PRIMARY_COLOR};

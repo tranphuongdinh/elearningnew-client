@@ -7,11 +7,15 @@ const axiosInstance = axios.create({
     timeout: 5000,
     headers: {
         "Accept-Version": 1,
-        'Accept': "application/json",
+        Accept: "application/json",
         "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json; charset=utf-8",
-				'TokenCybersoft': `${TOKEN_CYBERSOFT}`,
-				Authorization: `Bearer ${typeof window !== 'undefined' ? localStorage.getItem("access_token") : ''}`,
+        TokenCybersoft: `${TOKEN_CYBERSOFT}`,
+        Authorization: `Bearer ${
+            typeof window !== "undefined"
+                ? localStorage.getItem("access_token")
+                : ""
+        }`,
     },
 });
 

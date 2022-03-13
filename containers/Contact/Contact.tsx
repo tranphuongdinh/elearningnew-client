@@ -25,10 +25,10 @@ const Contact: React.FC = () => {
             phone,
             message,
         };
-				setName("");
-				setEmail("");
-				setPhone("");
-				setMessage("");
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
     };
 
     const formInputs = [

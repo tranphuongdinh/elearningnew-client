@@ -18,7 +18,7 @@ export interface Course {
     };
     soLuongHocVien: number;
     tenKhoaHoc: string;
-		danhGia: number;
+    danhGia: number;
 }
 
 export interface CourseRegisterInfo {
@@ -45,18 +45,18 @@ export interface UserVM {
     matKhau: string;
     hoTen: string;
     soDT: string;
-		maLoaiNguoiDung: string;
+    maLoaiNguoiDung: string;
     maNhom: string;
     email: string;
-		chiTietKhoaHocGhiDanh: any;
+    chiTietKhoaHocGhiDanh: any;
 }
 
 export interface AccountVM {
-	taiKhoan: string;
+    taiKhoan: string;
 }
 
 export interface CourseIdVM {
-		maKhoaHoc: string;
+    maKhoaHoc: string;
 }
 
 export interface ButtonSocialProps {
@@ -65,8 +65,8 @@ export interface ButtonSocialProps {
 
 export type CourseProps = {
     course: Course;
-		taiKhoan?: string;
-		updateUser?: any;
+    taiKhoan?: string;
+    updateUser?: any;
 };
 
 export type CoursesProps = {
@@ -74,19 +74,19 @@ export type CoursesProps = {
     count?: number;
     totalPages?: number;
     totalCount?: number;
-		courses?: any;
+    courses?: any;
 };
 
 export type CoursesListProps = {
     courses: any;
-		title: string;
-		currentPage?: number;
-		count?: number;
-		totalPages?: number;
-		totalCount?: number;
-		expand?: boolean;
-}
+    title: string;
+    currentPage?: number;
+    count?: number;
+    totalPages?: number;
+    totalCount?: number;
+    expand?: boolean;
+};
 
 export type UserPageProps = {
-		user: UserVM;
-}
+    user: UserVM;
+};

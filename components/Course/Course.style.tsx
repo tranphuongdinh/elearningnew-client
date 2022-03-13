@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import { PRIMARY_BACKGROUND_COLOR, PRIMARY_COLOR, PRIMARY_COLOR_HOVER } from "../../constants/style";
+import {
+    PRIMARY_BACKGROUND_COLOR,
+    PRIMARY_COLOR,
+    PRIMARY_COLOR_HOVER,
+} from "../../constants/style";
 
 export const CourseCategory = styled.span`
     position: absolute;
@@ -11,11 +15,12 @@ export const CourseCategory = styled.span`
     color: #000;
     z-index: 2;
     transition: all 0.2s ease-in-out;
-		border-bottom-left-radius: 10px;
-		color: #fff;
-		&:hover {
-			background-color: ${PRIMARY_COLOR_HOVER};	
-		}
+    border-bottom-left-radius: 10px;
+    color: #fff;
+    font-size: 0.8rem;
+    &:hover {
+        background-color: ${PRIMARY_COLOR_HOVER};
+    }
 `;
 
 export const CourseWrapper = styled.div`
@@ -31,27 +36,30 @@ export const CourseWrapper = styled.div`
     }
 `;
 
-
 export const CourseContainer = styled.div`
     background: ${PRIMARY_BACKGROUND_COLOR};
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-		height: 100%;
+    height: 100%;
 `;
 
 export const ImageWrapper = styled.div`
-		cursor: pointer;
-		overflow: hidden;
+    cursor: pointer;
+    overflow: hidden;
     width: 100%;
     height: 200px;
     background: url("/images/course-default.jpg") center no-repeat;
-		background-size: cover;
+    background-size: cover;
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-				transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+
+    @media (max-width: 576px) {
+        height: 150px;
     }
 `;
 
@@ -59,32 +67,32 @@ export const InfoWrapper = styled.div`
     padding: 10px 20px;
 
     h3 {
-				cursor: pointer;
+        cursor: pointer;
         max-width: 100%;
         text-overflow: ellipsis;
         overflow: hidden;
         font-size: 1.4rem;
         color: ${PRIMARY_COLOR};
 
-				&:hover {
-					color: ${PRIMARY_COLOR_HOVER};
-				}
+        &:hover {
+            color: ${PRIMARY_COLOR_HOVER};
+        }
 
-				span {
-					display: inline-block;
-					color: #fff;
-					i {
-						display: inline-block;
-						margin-left:5px;
-						font-size: 1.2rem;
-						line-height: 1.5;
-						transform: translateY(-2px);
-					}
-				}
+        span {
+            display: inline-block;
+            color: #fff;
+            i {
+                display: inline-block;
+                margin-left: 5px;
+                font-size: 1.2rem;
+                line-height: 1.5;
+                transform: translateY(-2px);
+            }
+        }
     }
 
     p {
         text-align: right;
-      	color: #fff;
+        color: #fff;
     }
 `;

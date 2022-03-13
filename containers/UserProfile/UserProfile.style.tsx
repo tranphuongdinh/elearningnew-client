@@ -18,7 +18,7 @@ export const ProfileInfo = styled.div`
         text-align: left;
         margin: 30px 0;
         font-size: 1.6rem;
-				max-width: 400px;
+        max-width: 400px;
 
         @media (max-width: 678px) {
             font-size: 1.4rem;
@@ -48,7 +48,7 @@ export const ProfileInfoHeader = styled.div`
 `;
 
 export const Filter = styled.div`
-		margin-left: auto;
+    margin-left: auto;
     position: relative;
     width: 300px;
 

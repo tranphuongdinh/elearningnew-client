@@ -2,7 +2,11 @@ import React, { useContext, useEffect } from "react";
 import Link from "next/link";
 import { CourseProps } from "../../models/models";
 import StarRatings from "react-star-ratings";
-import { DANG_NHAP, DANH_MUC_KHOA_HOC, KHOA_HOC } from "../../constants/navigation";
+import {
+    DANG_NHAP,
+    DANH_MUC_KHOA_HOC,
+    KHOA_HOC,
+} from "../../constants/navigation";
 import { PRIMARY_COLOR } from "../../constants/style";
 import {
     ExpandCourseContainer,
@@ -41,7 +45,7 @@ const ExpandCourse: React.FC<CourseProps> = ({ course }) => {
 
     useEffect(() => {
         isAuthenticated && getRegisteredCourses();
-				console.log(course);
+        console.log(course);
     }, []);
 
     const registerCourse = async (maKhoaHoc: string, taiKhoan: string) => {

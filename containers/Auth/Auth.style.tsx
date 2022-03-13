@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { Container } from "../../components/Commons/Commons.style";
-import { COLOR_GREEN, PRIMARY_COLOR, PRIMARY_COLOR_HOVER } from "../../constants/style";
+import {
+    COLOR_GREEN,
+    PRIMARY_COLOR,
+    PRIMARY_COLOR_HOVER,
+} from "../../constants/style";
 
 export const LoginWrapper = styled.div`
     padding: 100px 0;
@@ -44,7 +48,6 @@ export const LoginContainer = styled(Container)`
         justify-content: space-around;
     }
 `;
-
 
 export const LoginContent = styled.div`
     width: 50%;
@@ -139,9 +142,9 @@ export const ToggleShowPassword = styled.div`
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-		&:hover {
-			color: ${PRIMARY_COLOR};
-		}
+    &:hover {
+        color: ${PRIMARY_COLOR};
+    }
 `;
 
 export const ButtonSubmit = styled.button`
@@ -174,7 +177,6 @@ export const RegisterText = styled.p`
 
     @media (max-width: 476px) {
         font-size: 0.9rem;
-        
     }
 
     a {
@@ -186,35 +188,35 @@ export const RegisterText = styled.p`
     }
 `;
 
-export const InputLabel = styled.span `
-	display: inline-block;
-	text-transform: uppercase;
-	font-weight: bolder;
-	width: 100%;
-	text-align: left;
-	margin: 20px 0 5px 0;
+export const InputLabel = styled.span`
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bolder;
+    width: 100%;
+    text-align: left;
+    margin: 20px 0 5px 0;
 
-	i {
-		display: inline-block;	
-		margin-right: 10px;
-	}
-`
+    i {
+        display: inline-block;
+        margin-right: 10px;
+    }
+`;
 
 export const Validator = styled.div`
-	display: flex;
-	flex-direction: column;
-	padding: 20px;
-`
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+`;
 export const ValidatorError = styled.span`
-		display: inline-block;
-		margin-top: 15px;
-		color: ${COLOR_GREEN};
+    display: inline-block;
+    margin-top: 15px;
+    color: ${COLOR_GREEN};
     &.error {
         color: red;
     }
-		i {
-			display: inline-block;
-			height: 100%;
-			width: 20px;
-		}
+    i {
+        display: inline-block;
+        height: 100%;
+        width: 20px;
+    }
 `;

@@ -5,11 +5,11 @@ import { Button } from "../Header/Header.style";
 
 export const BannerWrapper = styled.div`
     position: relative;
-		padding: 60px 0;
+    padding: 60px 0;
 
-		@media (max-width: 576px) {
-			padding: 30px 0;
-		}
+    @media (max-width: 576px) {
+        padding: 30px 0;
+    }
     &:after {
         content: "";
         position: absolute;
@@ -19,7 +19,7 @@ export const BannerWrapper = styled.div`
         height: 100%;
         background: #000;
         opacity: 0.5;
-				z-index: 2;
+        z-index: 2;
     }
     #backgroundVideo {
         position: absolute;
@@ -30,7 +30,7 @@ export const BannerWrapper = styled.div`
         object-fit: cover;
     }
 `;
-	
+
 export const BannerContainer = styled(Container)`
     position: relative;
     z-index: 3;
@@ -44,21 +44,21 @@ export const BannerContainer = styled(Container)`
 `;
 
 export const BannerContent = styled.div`
-	margin: 20px;
-	color:#fff;
-	h1 {
-		font-size: 50px;
-		line-height: 1.2;
-		margin: 0;
+    margin: 20px;
+    color: #fff;
+    h1 {
+        font-size: 50px;
+        line-height: 1.2;
+        margin: 0;
 
-		@media (max-width: 768px) {
-			font-size: 2.25rem;
-		}
-	}
-	p {
-		font-style: italic;
-	}
-`
+        @media (max-width: 768px) {
+            font-size: 2.25rem;
+        }
+    }
+    p {
+        font-style: italic;
+    }
+`;
 
 export const ButtonGroup = styled.div`
     ${Button} {
@@ -87,7 +87,7 @@ export const BannerImage = styled.div`
     }
 
     @media (max-width: 768px) {
-				margin-top: 30px;
+        margin-top: 30px;
         width: 250px;
         height: 250px;
     }
@@ -100,6 +100,6 @@ export const BannerImage = styled.div`
     }
 
     @media (max-width: 576px) {
-			display: none;
+        display: none;
     }
 `;

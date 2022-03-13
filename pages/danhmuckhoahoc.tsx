@@ -53,10 +53,12 @@ const Home: NextPage<CoursesProps> = ({ courses }) => {
                 <CategoryHeader>
                     <h1>{categoriesMap[maDanhMuc.toString()]}</h1>
                 </CategoryHeader>
-                <CoursesList
-                    courses={courses}
-                    title={"Các khóa học phổ biến"}
-                ></CoursesList>
+                {typeof courses !== "string" && (
+                    <CoursesList
+                        courses={courses}
+                        title={"Các khóa học phổ biến"}
+                    ></CoursesList>
+                )}
             </MainSection>
         </div>
     );
@@ -65,7 +67,6 @@ const Home: NextPage<CoursesProps> = ({ courses }) => {
 export async function getServerSideProps(ctx: any) {
     const maDanhMuc = ctx.query.maDanhMuc;
     const data = await getCoursesClient().getCoursesByCategory(maDanhMuc);
-    console.log(data);
     return {
         props: {
             courses: data || [],

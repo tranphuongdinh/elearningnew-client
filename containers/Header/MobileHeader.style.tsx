@@ -13,37 +13,35 @@ export const MobileHeaderWrapper = styled.div`
     box-shadow: 0px 0px 10px #d2d2d2;
 `;
 
-export const MobileHeaderContainer = styled(HeaderContainer)`
-`
+export const MobileHeaderContainer = styled(HeaderContainer)``;
 
 export const ToggleMenu = styled.div`
-	font-size: 1.3rem;
-	cursor: pointer;
+    font-size: 1.3rem;
+    cursor: pointer;
 
-	&:hover {
-		color: ${PRIMARY_COLOR};
-	}
-`
+    &:hover {
+        color: ${PRIMARY_COLOR};
+    }
+`;
 
 export const CloseMenu = styled(ToggleMenu)`
-	color: #fff;
-	position: absolute;
-	top: 15px;
-	right: 20px;
-`
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+`;
 export const BrandIcon = styled(CloseMenu)`
-	right: 0;
-	left :45px;
-	width: 30px;
-	height: 30px;
+    right: 0;
+    left: 45px;
+    width: 30px;
+    height: 30px;
 
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: contain;
-	}
-`
-
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+`;
 
 export const MobileMenu = styled.div`
     padding-top: 60px;
@@ -112,6 +110,5 @@ export const MobileMenu = styled.div`
 `;
 
 export const AuthInfo = styled.div`
-	border-bottom: 1px solid ${PRIMARY_COLOR};
-`
-
+    border-bottom: 1px solid ${PRIMARY_COLOR};
+`;

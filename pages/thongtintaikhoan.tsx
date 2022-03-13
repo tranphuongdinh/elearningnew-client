@@ -17,15 +17,14 @@ import {
 } from "../containers/UserProfile/UserProfile.style";
 import { Button } from "../containers/Header/Header.style";
 import { ButtonGroup } from "../containers/Banner/Banner.style";
-import {
-    MIN_LENGTH,
-    PASSWORD,
-} from "../constants/validation";
+import { MIN_LENGTH, PASSWORD } from "../constants/validation";
 import ProfileCourse from "../components/ProfileCourse/ProfileCourse";
 import { AuthContext } from "../context/auth/auth.context";
 import { toast } from "react-toastify";
 import { ValidatorError } from "../containers/Auth/Auth.style";
 import { CoursesGrid } from "../containers/CoursesList/CoursesList.style";
+import { KHOA_HOC } from "../constants/navigation";
+import Link from "next/link";
 
 const ThongTinTaiKhoan: NextPage = () => {
     const {
@@ -176,7 +175,7 @@ const ThongTinTaiKhoan: NextPage = () => {
                                                 <input
                                                     required
                                                     type="text"
-                                                    value={account}
+                                                    defaultValue={account}
                                                     className="disabled"
                                                 />
                                             </ProfileInputGroup>
@@ -328,6 +327,23 @@ const ThongTinTaiKhoan: NextPage = () => {
                                                     );
                                                 }
                                             }
+                                        )}
+
+                                        {userDetail?.chiTietKhoaHocGhiDanh
+                                            ?.length === 0 && (
+                                            <p>
+                                                Bạn chưa đăng kí khóa học nào.{" "}
+                                                <Link href={KHOA_HOC}>
+                                                    <span
+                                                        style={{
+                                                            fontWeight: "600",
+                                                            cursor: "pointer",
+                                                        }}
+                                                    >
+                                                        Đăng kí ngay
+                                                    </span>
+                                                </Link>
+                                            </p>
                                         )}
                                     </CoursesGrid>
                                 </ProfileInfo>

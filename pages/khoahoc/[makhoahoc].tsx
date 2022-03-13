@@ -8,7 +8,7 @@ import styled from "styled-components";
 import { getCoursesClient } from "../../apis/getCoursesClient";
 import { getUserClient } from "../../apis/getUserClient";
 import { Container, MainSection } from "../../components/Commons/Commons.style";
-import { DANG_NHAP } from "../../constants/navigation";
+import { DANG_NHAP, KHOA_HOC } from "../../constants/navigation";
 import { PRIMARY_COLOR } from "../../constants/style";
 import { Button } from "../../containers/Header/Header.style";
 import { AuthContext } from "../../context/auth/auth.context";
@@ -106,10 +106,7 @@ export const CourseDetailContent = styled.div``;
 const ChiTietKhoaHoc: NextPage<ChiTietKhoaHocProps> = ({ course }) => {
     const router = useRouter();
     const {
-        authState: { isAuthenticated },
-    } = useContext<any>(AuthContext);
-    const {
-        authState: { user },
+        authState: { isAuthenticated, user },
     } = useContext<any>(AuthContext);
 
     const [registeredCourses, setRegisteredCourses] = React.useState<any>({});
@@ -128,6 +125,9 @@ const ChiTietKhoaHoc: NextPage<ChiTietKhoaHocProps> = ({ course }) => {
     };
 
     useEffect(() => {
+        if (typeof course === "string") {
+            router.push(KHOA_HOC);
+        }
         isAuthenticated && getRegisteredCourses();
     }, []);
 

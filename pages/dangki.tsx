@@ -219,7 +219,6 @@ const Register: NextPage = () => {
                                     }
                                     required
                                 />
-																
                             </InputGroup>
 
                             <InputLabel>

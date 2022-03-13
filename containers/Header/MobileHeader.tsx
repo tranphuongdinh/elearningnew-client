@@ -56,6 +56,7 @@ const MobileHeader: React.FC<HeaderProps> = ({ user }) => {
                 tenKhoaHoc: searchValue,
             },
         });
+        setToggleMenu(false);
     };
 
     const onSelect = (option: any) => {

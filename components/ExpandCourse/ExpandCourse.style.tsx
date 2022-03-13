@@ -11,7 +11,6 @@ export const ExpandCourseWrapper = styled.div`
     box-shadow: 5px 5px 10px #d6d6d6, -5px -5px 10px #ffffff;
 `;
 
-
 export const ExpandCourseContainer = styled.div`
     @media (max-width: 768px) {
         padding-top: 15px;
@@ -24,9 +23,9 @@ export const ExpandCourseContainer = styled.div`
 
     @media (max-width: 768px) {
         p {
-					display: none;
-				}
-				height: auto;
+            display: none;
+        }
+        height: auto;
     }
 `;
 
@@ -34,14 +33,14 @@ export const ImageWrapper = styled.div`
     position: relative;
     overflow: hidden;
     width: 300px;
-		min-width: 300px;
+    min-width: 300px;
     height: 100%;
     background: url("/images/course-default.jpg") center no-repeat;
     background-size: cover;
 
-		@media (max-width: 768px) {
-			display: none;
-		}
+    @media (max-width: 768px) {
+        display: none;
+    }
 
     img {
         width: 100%;
@@ -96,6 +95,6 @@ export const InfoWrapper = styled.div`
 
     ${Button} {
         margin-left: auto;
-				margin-top: 10px;
+        margin-top: 10px;
     }
 `;

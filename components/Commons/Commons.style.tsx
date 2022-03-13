@@ -28,7 +28,7 @@ export const Container = styled.div`
 
 export const MainSection = styled.div`
     padding-top: 80px;
-		min-height: 600px;
+    min-height: 600px;
     @media (max-width: 1199px) {
         padding-top: 60px;
     }

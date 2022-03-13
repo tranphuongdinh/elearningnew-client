@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { Container } from "../../components/Commons/Commons.style";
-import { PRIMARY_COLOR, PRIMARY_BACKGROUND_COLOR, PRIMARY_COLOR_HOVER } from "../../constants/style";
+import {
+    PRIMARY_COLOR,
+    PRIMARY_BACKGROUND_COLOR,
+    PRIMARY_COLOR_HOVER,
+} from "../../constants/style";
 import { ButtonSocialProps } from "../../models/models";
 import { Button, SearchBar } from "../Header/Header.style";
 
@@ -84,4 +88,40 @@ export const ButtonSocial = styled(Button)<ButtonSocialProps>`
 
 export const FooterEnd = styled(Container)`
     justify-content: space-between;
+`;
+
+export const AddressContainer = styled(FooterContainer)``;
+
+export const AddressWrapper = styled.div`
+    color: #fff;
+    h3 {
+        color: ${PRIMARY_COLOR};
+        margin-bottom: 5px;
+    }
+    width: 100%;
+
+    &:not(:first-child) {
+        margin-top: 30px;
+    }
+`;
+
+export const AddressDetail = styled.div`
+    h4 {
+        margin-bottom: 5px;
+    }
+    p {
+        font-size: 0.8rem;
+        color: #ccc;
+    }
+`;
+
+export const AddressDetailWrapper = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 50px;
+    grid-row-gap: 10px;
+
+    @media (max-width: 476px) {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
 `;
