@@ -57,7 +57,7 @@ const DangNhap: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Đăng nhập | Elearning</title>
+                <title>Đăng nhập | Cybersoft Elearning</title>
             </Head>
             <LoginWrapper>
                 <video autoPlay muted loop id="backgroundVideo">

@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { AuthProvider } from "../context/auth/auth.provider";
 import AppLayout from "../containers/AppLayout";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
     const [loaded, setLoaded] = useState(false);
@@ -12,6 +13,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <>
+            <Head>
+                <title>Cybersoft Elearning</title>
+            </Head>
             {loaded && (
                 <AuthProvider>
                     <AppLayout>

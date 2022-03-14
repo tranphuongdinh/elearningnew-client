@@ -159,7 +159,7 @@ const ThongTinTaiKhoan: NextPage = () => {
     return (
         <div>
             <Head>
-                <title>Thông tin tài khoản | Elearning</title>
+                <title>Thông tin tài khoản | Cybersoft Elearning</title>
             </Head>
             <MainSection>
                 {isAuthenticated && (

@@ -26,7 +26,7 @@ const TimKiemKhoaHoc: NextPage<CoursesProps> = ({
     return (
         <div>
             <Head>
-                <title>Tìm kiếm khóa học | Elearning</title>
+                <title>Tìm kiếm khóa học | Cybersoft Elearning</title>
             </Head>
             <MainSection>
                 <CoursesList

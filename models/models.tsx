@@ -20,17 +20,14 @@ export interface Course {
     tenKhoaHoc: string;
     danhGia: number;
 }
-
 export interface CourseRegisterInfo {
     maKhoaHoc: string;
     taiKhoan: string;
 }
-
 export interface LoginInfo {
     taiKhoan: string;
     matKhau: string;
 }
-
 export interface UserVMM {
     taiKhoan: string;
     matKhau: string;
@@ -39,7 +36,6 @@ export interface UserVMM {
     maNhom: string;
     email: string;
 }
-
 export interface UserVM {
     taiKhoan: string;
     matKhau: string;
@@ -50,17 +46,20 @@ export interface UserVM {
     email: string;
     chiTietKhoaHocGhiDanh: any;
 }
-
 export interface AccountVM {
     taiKhoan: string;
 }
-
 export interface CourseIdVM {
     maKhoaHoc: string;
 }
-
 export interface ButtonSocialProps {
     backgroundColor: string;
+}
+export interface PaginatorProps {
+    currentPage: number;
+    count: number;
+    totalPages: number;
+    totalCount: number;
 }
 
 export type CourseProps = {
@@ -89,4 +88,21 @@ export type CoursesListProps = {
 
 export type UserPageProps = {
     user: UserVM;
+};
+
+export type InputProps = {
+    placeholder: string;
+    type: string;
+    name: string;
+    value: string;
+    icon: string;
+    onChange: any;
+};
+
+export type HeaderProps = {
+    user: any;
+};
+
+export type ChiTietKhoaHocProps = {
+    course: Course;
 };

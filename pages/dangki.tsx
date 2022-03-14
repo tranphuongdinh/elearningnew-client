@@ -97,7 +97,7 @@ const Register: NextPage = () => {
     return (
         <>
             <Head>
-                <title>Đăng kí | Elearning</title>
+                <title>Đăng kí | Cybersoft Elearning</title>
             </Head>
             <LoginWrapper>
                 <video autoPlay muted loop id="backgroundVideo">

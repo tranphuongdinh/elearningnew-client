@@ -17,7 +17,7 @@ const KhoaHoc: NextPage<CoursesProps> = ({
     return (
         <div>
             <Head>
-                <title>Khóa học | Elearning</title>
+                <title>Khóa học | Cybersoft Elearning</title>
             </Head>
             <MainSection>
                 <CategoryHeader>

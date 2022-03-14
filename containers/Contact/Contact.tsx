@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
     const formInputs = [
         {
             type: "text",
-            placeholder: "*Họ và tên",
+            placeholder: "Họ và tên",
             name: "name",
             value: name,
             icon: "fa-solid fa-user",
@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
         },
         {
             type: "email",
-            placeholder: "*Email",
+            placeholder: "Email",
             name: "email",
             value: email,
             icon: "fa-solid fa-envelope",
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
         },
         {
             type: "tel",
-            placeholder: "*Số điện thoại",
+            placeholder: "Số điện thoại",
             name: "phone",
             value: phone,
             icon: "fa-solid fa-phone",

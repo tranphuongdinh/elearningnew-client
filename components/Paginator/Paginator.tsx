@@ -2,13 +2,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 import { PRIMARY_COLOR, PRIMARY_COLOR_HOVER } from "../../constants/style";
-
-interface PaginatorProps {
-    currentPage: number;
-    count: number;
-    totalPages: number;
-    totalCount: number;
-}
+import { PaginatorProps } from "../../models/models";
 
 const PaginatorWrapper = styled.div`
 	display: flex:

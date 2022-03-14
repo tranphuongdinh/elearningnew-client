@@ -1,14 +1,6 @@
 import React from "react";
+import { InputProps } from "../../models/models";
 import { InputArea, InputWrapper } from "./Input.style";
-
-type InputProps = {
-    placeholder: string;
-    type: string;
-    name: string;
-    value: string;
-    icon: string;
-    onChange: any;
-};
 
 const Input: React.FC<InputProps> = ({
     type,

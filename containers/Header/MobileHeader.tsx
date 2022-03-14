@@ -28,10 +28,7 @@ import {
 import { AuthContext } from "../../context/auth/auth.context";
 import { getCoursesClient } from "../../apis/getCoursesClient";
 import Dropdown from "react-dropdown";
-
-type HeaderProps = {
-    user: any;
-};
+import { HeaderProps } from "../../models/models";
 
 const MobileHeader: React.FC<HeaderProps> = ({ user }) => {
     const router = useRouter();

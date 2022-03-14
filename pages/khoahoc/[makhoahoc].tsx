@@ -12,11 +12,7 @@ import { DANG_NHAP, KHOA_HOC } from "../../constants/navigation";
 import { PRIMARY_COLOR } from "../../constants/style";
 import { Button } from "../../containers/Header/Header.style";
 import { AuthContext } from "../../context/auth/auth.context";
-import { Course } from "../../models/models";
-
-type ChiTietKhoaHocProps = {
-    course: Course;
-};
+import { ChiTietKhoaHocProps, Course } from "../../models/models";
 
 export const CourseDetailHeader = styled.div`
     width: 100%;
@@ -34,6 +30,8 @@ export const CourseDetailHeader = styled.div`
         background: rgba(0, 0, 0, 0.5);
     }
 `;
+
+export const CourseDetailContent = styled.div``;
 
 export const CourseDetailContainer = styled(Container)`
     justify-content: space-between;
@@ -101,8 +99,6 @@ export const CourseDetailContainer = styled(Container)`
     }
 `;
 
-export const CourseDetailContent = styled.div``;
-
 const ChiTietKhoaHoc: NextPage<ChiTietKhoaHocProps> = ({ course }) => {
     const router = useRouter();
     const {
@@ -156,7 +152,7 @@ const ChiTietKhoaHoc: NextPage<ChiTietKhoaHocProps> = ({ course }) => {
     return (
         <div>
             <Head>
-                <title>Chi tiết khóa học | Elearning</title>
+                <title>Chi tiết khóa học | Cybersoft Elearning</title>
             </Head>
             <MainSection>
                 <CourseDetailHeader>

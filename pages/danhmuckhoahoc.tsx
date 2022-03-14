@@ -47,7 +47,7 @@ const Home: NextPage<CoursesProps> = ({ courses }) => {
     return (
         <div>
             <Head>
-                <title>Danh mục khóa học | Elearning</title>
+                <title>Danh mục khóa học | Cybersoft Elearning</title>
             </Head>
             <MainSection>
                 <CategoryHeader>

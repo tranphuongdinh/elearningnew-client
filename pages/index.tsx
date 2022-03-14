@@ -12,7 +12,7 @@ const Home: NextPage<CoursesProps> = ({ courses }) => {
     return (
         <div>
             <Head>
-                <title>Trang chủ | Elearning</title>
+                <title>Trang chủ | Cybersoft Elearning</title>
             </Head>
             <MainSection>
                 <Banner></Banner>

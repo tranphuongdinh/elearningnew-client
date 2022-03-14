@@ -25,10 +25,7 @@ import {
 import { AuthContext } from "../../context/auth/auth.context";
 import Dropdown from "react-dropdown";
 import { getCoursesClient } from "../../apis/getCoursesClient";
-
-type HeaderProps = {
-    user: any;
-};
+import { HeaderProps } from "../../models/models";
 
 const Header: React.FC<HeaderProps> = ({ user }) => {
     const { authDispatch } = useContext<any>(AuthContext);
